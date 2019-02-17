@@ -115,7 +115,7 @@ body {
 .main {
   padding: 0 30px;
   display: table;
-  height: 79vh;
+  height: 100vh;
 }
 
 .main .container {
@@ -142,7 +142,7 @@ body {
 }
 
 .work {
-  height: 75vh;
+  height: 95vh;
   width: 100vw;
   position: relative;
   margin: 0 auto;
