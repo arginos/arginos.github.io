@@ -99,7 +99,7 @@ body {
 .nav ul li {
   color: #fff;
   display: inline-block;
-  height: 80px;
+  height: 12vh;
   line-height: 80px;
   list-style: none;
   padding: 0 5%;
