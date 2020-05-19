@@ -65,7 +65,7 @@ body {
 }
 
 .active {
-    background-color: #552583;
+    background-color: #471b70;
 }
 
 .active .player-name {
@@ -162,7 +162,7 @@ i {
 }
 
 .winner {
-    background-color: #f7f7f7;
+    background-color: #FDB927;
 }
 
 .winner .player-name {
