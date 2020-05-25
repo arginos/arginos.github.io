@@ -1,3 +1,55 @@
+/* Sticky Navbar Function
+ *******************************/
+window.onscroll = () => { stickyScroll() };
+var navbar = document.getElementById("navigate");
+var sticky = navbar.offsetLeft;
+
+function stickyScroll() {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+
+/* Introduction Three.js Animation
+ ****************************************/
+var threeD = () => {
+    var scene
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerWidth, 0.1, 1000);
+
+    var renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setClearColor("#e5e5e5");
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    window.addEventListener('resize', () => {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+    })
+
+    var geometry = new THREE.BoxGeometry(1, 1, 1);
+    var material = new THREE.MeshLambertMaterial({ color: 0x00ff00 });
+    var cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+    camera.position.z = 5;
+
+    var render = () => {
+        requestAnimationFrame(render);
+        renderer.render(scene, camera);
+    }
+    render();
+}
+threeD();
+
+
+
+/* Pig Game Code
+ **************************************/
+
 var scores, roundScore, activePlayer, gamePlay;
 
 init();
